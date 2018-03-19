@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NetworkExtension
 
 class ViewController: UIViewController {
 
@@ -20,6 +21,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBOutlet weak var connectButton: UIButton!
+    
+    @IBAction func didTapConnect(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+    }
+    
 }
 

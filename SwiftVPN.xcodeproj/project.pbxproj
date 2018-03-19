@@ -7,14 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C0A1625205A25400057DB29 /* VPNManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A1624205A25400057DB29 /* VPNManager.swift */; };
+		4C0A162B205A53C20057DB29 /* Keychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A162A205A53C20057DB29 /* Keychain.m */; };
 		4C643B25205A17D1004F409E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C643B24205A17D1004F409E /* AppDelegate.swift */; };
 		4C643B27205A17D1004F409E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C643B26205A17D1004F409E /* ViewController.swift */; };
 		4C643B2A205A17D1004F409E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C643B28205A17D1004F409E /* Main.storyboard */; };
 		4C643B2C205A17D1004F409E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C643B2B205A17D1004F409E /* Assets.xcassets */; };
 		4C643B2F205A17D1004F409E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C643B2D205A17D1004F409E /* LaunchScreen.storyboard */; };
+		4C643B38205A188A004F409E /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C643B37205A188A004F409E /* NetworkExtension.framework */; };
+		4C643B43205A1FCA004F409E /* AppProxyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C643B42205A1FCA004F409E /* AppProxyProvider.swift */; };
+		4C643B47205A1FCA004F409E /* ProxyProvider.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4C643B3E205A1FCA004F409E /* ProxyProvider.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4C643B45205A1FCA004F409E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C643B19205A17D1004F409E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C643B3D205A1FCA004F409E;
+			remoteInfo = ProxyProvider;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4C643B4B205A1FCA004F409E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4C643B47205A1FCA004F409E /* ProxyProvider.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		4C0A1624205A25400057DB29 /* VPNManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNManager.swift; sourceTree = "<group>"; };
+		4C0A1628205A53C10057DB29 /* SwiftVPN-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftVPN-Bridging-Header.h"; sourceTree = "<group>"; };
+		4C0A1629205A53C20057DB29 /* Keychain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Keychain.h; sourceTree = "<group>"; };
+		4C0A162A205A53C20057DB29 /* Keychain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Keychain.m; sourceTree = "<group>"; };
 		4C643B21205A17D1004F409E /* SwiftVPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftVPN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C643B24205A17D1004F409E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C643B26205A17D1004F409E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,10 +55,24 @@
 		4C643B2B205A17D1004F409E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C643B2E205A17D1004F409E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C643B30205A17D1004F409E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C643B37205A188A004F409E /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		4C643B39205A188A004F409E /* SwiftVPN.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftVPN.entitlements; sourceTree = "<group>"; };
+		4C643B3E205A1FCA004F409E /* ProxyProvider.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ProxyProvider.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C643B41205A1FCA004F409E /* ProxyProvider.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProxyProvider.entitlements; sourceTree = "<group>"; };
+		4C643B42205A1FCA004F409E /* AppProxyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProxyProvider.swift; sourceTree = "<group>"; };
+		4C643B44205A1FCA004F409E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4C643B1E205A17D1004F409E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C643B38205A188A004F409E /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C643B3B205A1FCA004F409E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,7 +86,9 @@
 			isa = PBXGroup;
 			children = (
 				4C643B23205A17D1004F409E /* SwiftVPN */,
+				4C643B3F205A1FCA004F409E /* ProxyProvider */,
 				4C643B22205A17D1004F409E /* Products */,
+				4C643B36205A188A004F409E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -47,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				4C643B21205A17D1004F409E /* SwiftVPN.app */,
+				4C643B3E205A1FCA004F409E /* ProxyProvider.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,14 +104,45 @@
 		4C643B23205A17D1004F409E /* SwiftVPN */ = {
 			isa = PBXGroup;
 			children = (
+				4C643B39205A188A004F409E /* SwiftVPN.entitlements */,
 				4C643B24205A17D1004F409E /* AppDelegate.swift */,
 				4C643B26205A17D1004F409E /* ViewController.swift */,
 				4C643B28205A17D1004F409E /* Main.storyboard */,
 				4C643B2B205A17D1004F409E /* Assets.xcassets */,
 				4C643B2D205A17D1004F409E /* LaunchScreen.storyboard */,
 				4C643B30205A17D1004F409E /* Info.plist */,
+				4C0A1624205A25400057DB29 /* VPNManager.swift */,
+				4C0A1629205A53C20057DB29 /* Keychain.h */,
+				4C0A162A205A53C20057DB29 /* Keychain.m */,
+				4C0A1628205A53C10057DB29 /* SwiftVPN-Bridging-Header.h */,
 			);
 			path = SwiftVPN;
+			sourceTree = "<group>";
+		};
+		4C643B36205A188A004F409E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C643B37205A188A004F409E /* NetworkExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C643B3F205A1FCA004F409E /* ProxyProvider */ = {
+			isa = PBXGroup;
+			children = (
+				4C643B42205A1FCA004F409E /* AppProxyProvider.swift */,
+				4C643B44205A1FCA004F409E /* Info.plist */,
+				4C643B40205A1FCA004F409E /* Supporting Files */,
+			);
+			path = ProxyProvider;
+			sourceTree = "<group>";
+		};
+		4C643B40205A1FCA004F409E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C643B41205A1FCA004F409E /* ProxyProvider.entitlements */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,15 +155,34 @@
 				4C643B1D205A17D1004F409E /* Sources */,
 				4C643B1E205A17D1004F409E /* Frameworks */,
 				4C643B1F205A17D1004F409E /* Resources */,
+				4C643B4B205A1FCA004F409E /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4C643B46205A1FCA004F409E /* PBXTargetDependency */,
 			);
 			name = SwiftVPN;
 			productName = SwiftVPN;
 			productReference = 4C643B21205A17D1004F409E /* SwiftVPN.app */;
 			productType = "com.apple.product-type.application";
+		};
+		4C643B3D205A1FCA004F409E /* ProxyProvider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C643B48205A1FCA004F409E /* Build configuration list for PBXNativeTarget "ProxyProvider" */;
+			buildPhases = (
+				4C643B3A205A1FCA004F409E /* Sources */,
+				4C643B3B205A1FCA004F409E /* Frameworks */,
+				4C643B3C205A1FCA004F409E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProxyProvider;
+			productName = ProxyProvider;
+			productReference = 4C643B3E205A1FCA004F409E /* ProxyProvider.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -95,6 +195,16 @@
 				ORGANIZATIONNAME = Michael;
 				TargetAttributes = {
 					4C643B20205A17D1004F409E = {
+						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.VPNLite = {
+								enabled = 1;
+							};
+						};
+					};
+					4C643B3D205A1FCA004F409E = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 					};
@@ -114,6 +224,7 @@
 			projectRoot = "";
 			targets = (
 				4C643B20205A17D1004F409E /* SwiftVPN */,
+				4C643B3D205A1FCA004F409E /* ProxyProvider */,
 			);
 		};
 /* End PBXProject section */
@@ -129,6 +240,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4C643B3C205A1FCA004F409E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -137,11 +255,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C643B27205A17D1004F409E /* ViewController.swift in Sources */,
+				4C0A162B205A53C20057DB29 /* Keychain.m in Sources */,
+				4C0A1625205A25400057DB29 /* VPNManager.swift in Sources */,
 				4C643B25205A17D1004F409E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4C643B3A205A1FCA004F409E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C643B43205A1FCA004F409E /* AppProxyProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4C643B46205A1FCA004F409E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C643B3D205A1FCA004F409E /* ProxyProvider */;
+			targetProxy = 4C643B45205A1FCA004F409E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4C643B28205A17D1004F409E /* Main.storyboard */ = {
@@ -273,13 +409,18 @@
 		4C643B34205A17D1004F409E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SwiftVPN/SwiftVPN.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86UUNEZV42;
 				INFOPLIST_FILE = SwiftVPN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MichaelOpenSourceFactory.SwiftVPN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftVPN/SwiftVPN-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -288,13 +429,49 @@
 		4C643B35205A17D1004F409E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SwiftVPN/SwiftVPN.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86UUNEZV42;
 				INFOPLIST_FILE = SwiftVPN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MichaelOpenSourceFactory.SwiftVPN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftVPN/SwiftVPN-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4C643B49205A1FCA004F409E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ProxyProvider/ProxyProvider.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 86UUNEZV42;
+				INFOPLIST_FILE = ProxyProvider/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MichaelOpenSourceFactory.SwiftVPN.ProxyProvider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4C643B4A205A1FCA004F409E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ProxyProvider/ProxyProvider.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 86UUNEZV42;
+				INFOPLIST_FILE = ProxyProvider/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MichaelOpenSourceFactory.SwiftVPN.ProxyProvider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -317,6 +494,15 @@
 			buildConfigurations = (
 				4C643B34205A17D1004F409E /* Debug */,
 				4C643B35205A17D1004F409E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C643B48205A1FCA004F409E /* Build configuration list for PBXNativeTarget "ProxyProvider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C643B49205A1FCA004F409E /* Debug */,
+				4C643B4A205A1FCA004F409E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
